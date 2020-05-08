@@ -1,0 +1,174 @@
+<!Doctype html>
+<head>
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ilyes Portfolio Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<script src="js/angular.min.js"></script>
+    <script src="js/angular-translate.min.js"></script>
+    <script src="js/angular-translate-loader-static-files.min.js"></script>
+    <script src="js/translate.js"></script>
+</head>
+
+<body data-spy="scroll" data-offset="80" ng-app="client-app" ng-controller="frontCtrl">
+	<!-- Header -->
+    <header id="main-header" class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-expand-lg navbar-light" style="margin-bottom: 10px;">
+                        <a class="navbar-brand" style=" padding-top: 5px;" href="index.html">
+                                <span style="color: white; font: 400 30px/1.5 'Pacifico', Helvetica, sans-serif;" id="name">Ilyes Bouchada</span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="ion-navicon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#iq-home">{{ 'HOME' | translate }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">{{ 'ABOUT' | translate }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#portfolio">{{ 'PORTFOLIO' | translate }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">{{ 'CONTACT' | translate }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" ng-click="changeLanguage($event)" class="nav-link bt-white">{{ 'LANGUAGE_1' | translate }}</a>
+								</li>
+								<li class="nav-item">
+									<a href="" ng-click="changeLanguage($event)" class="nav-link bt-white">{{ 'LANGUAGE_2' | translate }}</a>
+								</li>
+								<li class="nav-item">
+									<a href="" ng-click="changeLanguage($event)" class="nav-link bt-white">{{ 'LANGUAGE_3' | translate }}</a>
+								</li>
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+	<section id="iq-home" class="iq-banner-02 overview-block-pt iq-bg-over iq-over-blue-20"  style="height:100vh; background: url(images/home-bg.jpg); background-position: left top !important; background-repeat: no-repeat; background-size: 100% 100vh; background-attachment:fixed;">
+		<!-- BACKGROUND PARTICLES -->
+        <div id="particles-js"></div>
+		<h1 style=" margin-top: 30vh; padding-bottom: 25px; text-align: center; margin-bottom: 50px;" ><span id="welcome">{{ 'WELCOME' | translate }}</span></h1>
+		<div class="flex-container">
+				<div><span class="icone"><a href="https://www.facebook.com/ilyeso.bch" target="_blank"><i class="fa fa-facebook"></i></a></span></div>
+				<div><span class="icone"><a href="https://github.com/ilyes-bch" target="_blank"><i class="fa fa-github"></i></a></span></div>
+				<div><span class="icone"><a href="https://www.freecodecamp.com/ilyes-bch" target="_blank"><i class="fa fa-fire"></i></a></span></div>
+				<div><span class="icone"><a href="http://codepen.io/ilyeso1998/" target="_blank"><i class="fa fa-codepen"></i></a></span></div>
+		</div>
+	</section>
+	<section id="about">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="me2" class="col-md-4 col-sm-5 col-xs-12"><img class="img-responsive" style="width: 300px;" src="me.png"></div>
+				<div class="col-md-8 col-sm-7 col-xs-12">
+					<h2 class="text-center"><span style="padding:5px 80px; border-bottom:3px solid gray;">{{ 'ABOUT' | translate }}</span></h2>
+					<p  style="margin-top:50px; font-size: 1.25em">{{ 'ABOUT_MORE' | translate }}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="portfolio">
+		<h2 class="text-center"><span style="padding:5px 80px; border-bottom:3px solid black;">{{ 'PORTFOLIO' | translate }}</span></h2>
+		<p class="text-center" style="margin: 20px auto;"><span>{{ 'PORTFOLIO_MORE' | translate }}</span></h3>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<a href="https://codepen.io/ilyeso1998/pen/aBgYdL" class="thumbnail">
+						<img src="images/wikipedia-tool.png" style="width:400px;">
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<a href="https://codepen.io/ilyeso1998/pen/RRzodz" class="thumbnail">
+						<img src="images/quote-machine.png" style="width:400px;">
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<a href="https://codepen.io/ilyeso1998/pen/qqvwOb" class="thumbnail"> 
+						<img src="images/weather-orb.png"  style="width:400px;">
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<a href="https://codepen.io/ilyeso1998/pen/bBXPwJ" class="thumbnail">
+						<img src="images/calculator.png" style="width:400px;">
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<a href="https://codepen.io/ilyeso1998/pen/WoVQwe" class="thumbnail">
+						<img src="images/twitch.png" style="width:400px;">
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<a href="https://codepen.io/ilyeso1998/pen/QEaPyN" class="thumbnail"> 
+						<img src="images/portfolio.png"  style="width:400px;">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer -->
+    <footer id="contact" class="footer-info iq-pt-60iq-bg-over iq-over-blue-90 jarallax" id="contact" data-jarallax-video="m4v:./video/01.m4v,webm:./video/01.webm,ogv:./video/01.ogv">
+		<div class="container">
+			<div class="row iq-mt-40">
+					<div class="col-sm-12 text-center" style="color: white;">
+							<h3 class="title iq-tw-7 iq-font-white">{{'CONTACT' | translate}}</h3>
+							<p>{{'CONTACT_INFO' | translate}}</p>
+					</div>
+			</div>
+			<div class="flex-container" style="margin-top: 20px;">
+				<div><span class="icone"><a href="https://www.facebook.com/ilyeso.bch" target="_blank"><i class="fa fa-facebook"></i></a></span></div>
+				<div><span class="icone"><a href="https://github.com/ilyes-bch" target="_blank"><i class="fa fa-github"></i></a></span></div>
+				<div><span class="icone"><a href="https://www.freecodecamp.com/ilyes-bch" target="_blank"><i class="fa fa-fire"></i></a></span></div>
+				<div><span class="icone"><a href="http://codepen.io/ilyeso1998/" target="_blank"><i class="fa fa-codepen"></i></a></span></div>
+			</div>
+			<div class="row iq-mt-40">
+				<div class="col-sm-12 text-center">
+					<div class="footer-copyright iq-ptb-20">Copyright @<span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="https://ilyesbouchada.me" class="text-white">Bouchada Ilyes.</a> All Rights Reserved </div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- back-to-top -->
+    <div id="back-to-top">
+        <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>
+    </div>
+	<!-- back-to-top End -->
+	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+    <!-- Custom -->
+	<script src="js/custom.js"></script>
+	<script type="text/javascript" src="main.js" async></script>
+    <!-- Particles -->
+    <script src="js/particles/particles.min.js"></script>
+    <script src="js/particles/app.js"></script>
+</body>
